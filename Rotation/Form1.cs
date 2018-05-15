@@ -42,17 +42,12 @@ namespace Rotation
             Func<Point, Point> to = (p) => new Point(x + p.X, y - p.Y);
 
             Func<double, double> toRad = a => Math.PI * a / 180;
-
-            var b = new double[][]
-            {
-                new double[] { Math.Cos(toRad(angle)), Math.Sin(toRad(angle)) },
-                new double[] { Math.Cos(toRad(angle + 90)), Math.Sin(toRad(angle + 90)) },
-            };
-
+            var basisI = (Math.Cos(toRad(angle)), Math.Sin(toRad(angle)));
+            var basisJ = (Math.Cos(toRad(angle + 90)), Math.Sin(toRad(angle + 90)));
 
             Func<Point, Point> rotate = (p) => new Point(
-                                                    Convert.ToInt32(Math.Round(p.X * b[0][0] + p.Y * b[0][1])),
-                                                    Convert.ToInt32(Math.Round(p.X * b[1][0] + p.Y * b[1][1]))
+                                                    Convert.ToInt32(Math.Round(p.X * basisI.Item1 + p.Y * basisJ.Item1)),
+                                                    Convert.ToInt32(Math.Round(p.X * basisI.Item2 + p.Y * basisJ.Item2))
                                                );
             Enumerable
                 .Range(0, rectW)
