@@ -10,14 +10,6 @@ using System.Windows.Forms;
 
 namespace Rotation
 {
-    public static class Exts
-    {
-        public static Bitmap WithPixel(this Bitmap b, Point p, Color c)
-        {
-            b.SetPixel(p.X, p.Y, c);
-            return b;
-        }
-    }
     public partial class Form1 : Form
     {
         public Form1()
@@ -34,11 +26,11 @@ namespace Rotation
         {
             this.textBox1.Text = this.trackBar1.Value.ToString();
         }
+
         private Bitmap RectBitmap(int angle)
         {
-
             var boxSize = new Size(this.pictureBox.Size.Width, this.pictureBox.Size.Height);
-            var rectSize = new Size(100, 100);
+            var rectSize = new Size(100, 150);
 
             Point getCenter(Point p) => new Point(p.X / 2, p.Y / 2);
 
@@ -48,6 +40,7 @@ namespace Rotation
             Func<Point, Point> to(Point center) => (p) => new Point(center.X + p.X, center.Y - p.Y);
             double toRadian(double a) => Math.PI * a / 180;
             (double, double) toBasis(int a) => (Math.Cos(toRadian(a)), Math.Sin(toRadian(a)));
+            Func<Point, Bitmap> drawTo(Bitmap b) => (Point p) => { b.SetPixel(p.X, p.Y, Color.Red); return b; };
 
             var angleBetweenBasisVectors = 90;
             var basisI = toBasis(angle);
@@ -62,10 +55,10 @@ namespace Rotation
                 .SelectMany(i => Enumerable.Range(0, rectSize.Height).Select(j => new Point(i, j)))
                 .Select(rotate)
                 .Select(to(_center))
-                .Select(p => bitmap.WithPixel(p, Color.Red))
+                .Select(drawTo(bitmap))
                 .ToList();
 
-            bitmap.WithPixel(_center, Color.Black);
+            drawTo(bitmap)(_center);
             return bitmap;
         }
 
@@ -74,6 +67,7 @@ namespace Rotation
             FillTextBox();
             this.pictureBox.Image = RectBitmap(this.trackBar1.Value); 
         }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             Draw();

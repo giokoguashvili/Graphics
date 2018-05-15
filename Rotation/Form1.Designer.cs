@@ -40,13 +40,13 @@ namespace Rotation
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox.Location = new System.Drawing.Point(12, 12);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(828, 449);
+            this.pictureBox.Size = new System.Drawing.Size(971, 558);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(245, 476);
+            this.trackBar1.Location = new System.Drawing.Point(342, 576);
             this.trackBar1.Maximum = 360;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(377, 56);
@@ -55,7 +55,7 @@ namespace Rotation
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 476);
+            this.textBox1.Location = new System.Drawing.Point(236, 576);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 2;
@@ -64,7 +64,7 @@ namespace Rotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 544);
+            this.ClientSize = new System.Drawing.Size(995, 644);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox);
