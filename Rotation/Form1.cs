@@ -22,6 +22,10 @@ namespace Rotation
             Draw();
         }
 
+        private void FillTextBox()
+        {
+            this.textBox1.Text = this.trackBar1.Value.ToString();
+        }
         private Bitmap RectBitmap(int angle)
         {
             var width = this.pictureBox.Size.Width;
@@ -69,6 +73,7 @@ namespace Rotation
 
         private void Draw()
         {
+            FillTextBox();
             this.pictureBox.Image = RectBitmap(this.trackBar1.Value); 
         }
         private void trackBar1_Scroll(object sender, EventArgs e)
