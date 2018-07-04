@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27705.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rotation", "Rotation\Rotation.csproj", "{1CAA32C5-9502-460C-BFD3-F51CEEA2E2EA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A29905AF-AC4F-4D3F-89B4-581C9EAD9564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandelbrot", "Mandelbrot\Mandelbrot.csproj", "{FBE5000A-7484-4F6C-AAD0-3CE2993E03DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1CAA32C5-9502-460C-BFD3-F51CEEA2E2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CAA32C5-9502-460C-BFD3-F51CEEA2E2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CAA32C5-9502-460C-BFD3-F51CEEA2E2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29905AF-AC4F-4D3F-89B4-581C9EAD9564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29905AF-AC4F-4D3F-89B4-581C9EAD9564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29905AF-AC4F-4D3F-89B4-581C9EAD9564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29905AF-AC4F-4D3F-89B4-581C9EAD9564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE5000A-7484-4F6C-AAD0-3CE2993E03DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE5000A-7484-4F6C-AAD0-3CE2993E03DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE5000A-7484-4F6C-AAD0-3CE2993E03DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE5000A-7484-4F6C-AAD0-3CE2993E03DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
