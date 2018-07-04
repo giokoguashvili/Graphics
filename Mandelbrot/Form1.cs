@@ -47,7 +47,7 @@ namespace Mandelbrot
                     pF.Y -= 2;
                     g.DrawEllipse(new Pen(Color.Red), new RectangleF(pF, new Size(4, 4)));
 
-                    g.DrawLine(new Pen(Color.Green), point(i), point(i * n));
+                    g.DrawLine(new Pen(Color.Green), point(i), point(i * n * 0.2));
                     return true;
                 })
                 .ToList();
